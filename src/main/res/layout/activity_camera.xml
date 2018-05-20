@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 显示预览图形 -->
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" />
+    <!-- 相对布局，放置两个按钮 -->
+
+    <Button
+        android:id="@+id/camera_change_btn"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/camera_change" />
+
+    <Button
+        android:id="@+id/flight_light_btn"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/flashlight_auto" />
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <!-- 拍照按钮 -->
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"
+            android:text="取消"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/takepicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/buttonselector"
+            android:onClick="btnOnclick" />
+
+         <TextView
+            android:id="@+id/ok_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="4"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="18sp" /> 
+    </RelativeLayout>
+
+     <HorizontalScrollView
+        android:id="@+id/gallery_images"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonLayout" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_images"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+        </LinearLayout>
+    </HorizontalScrollView> 
+
+</RelativeLayout>

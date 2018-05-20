@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sky_blue">#3CB2E2</color>
+    <color name="rose_red">#E82654</color>
+    <color name="hint_grey">#999999</color>
+    <color name="text_black">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="low_grey">#f9f9f9</color>
+    <color name="kuang_grey">#e3e3e3</color>
+    <color name="apple_grey">#656565</color>
+    <color name="none_color">#00000000</color>
+
+</resources>
