@@ -1,0 +1,49 @@
+<resources>
+
+    <style name="style_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x32</item>
+        <item name="android:textColor">@color/theme_black333333</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="style_edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/x32</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/theme_black333333</item>
+        <item name="android:textColorHint">@color/theme_grey999999</item>
+    </style>
+
+    <style name="style_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x80</item>
+        <item name="android:textSize">@dimen/x36</item>
+        <item name="android:textColor">@color/theme_white</item>
+        <item name="android:background">@drawable/green_round_solid</item>
+    </style>
+
+    <style name="style_h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/x1</item>
+        <item name="android:background">@color/theme_greyededed</item>
+    </style>
+
+    <style name="style_v_line">
+        <item name="android:layout_width">@dimen/x1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/theme_greyededed</item>
+    </style>
+
+    <style name="style_list_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">#00ffffff</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+</resources>

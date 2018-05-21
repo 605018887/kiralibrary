@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x100"
+    android:background="@color/theme_greyF8F8F8">
+
+    <ImageView
+        android:id="@+id/title_left_btn"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100"
+        android:padding="@dimen/x32" />
+
+    <TextView
+        android:id="@+id/title_text"
+        style="@style/style_textview"
+        android:layout_centerInParent="true"
+        android:textColor="@color/theme_green5ec83d"
+        android:textSize="@dimen/x36" />
+
+    <TextView
+        android:id="@+id/title_right_text"
+        style="@style/style_textview"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x22"
+        android:textColor="@color/theme_black404040" />
+
+
+    <ImageView
+        android:id="@+id/title_right_btn"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/x100"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/x32" />
+
+    <View
+        android:id="@+id/title_bottom_line"
+        style="@style/style_h_line"
+        android:layout_height="@dimen/x2"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_greyD3D3D3" />
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.aplus.kira.kiralibrary;
+package com.aplus.kira.kiralibrary.tools;
 
 import android.app.Activity;
 import android.app.ActivityManager;

@@ -1,2 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aplus.kira.kiralibrary" />
+    package="com.aplus.kira.kiralibrary">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+
+        <service android:name="UpdateService" />
+
+        <!-- <provider
+             android:name="android.support.v4.content.FileProvider"
+             android:authorities="com.kira.kiralibrary.fileprovider"
+             android:exported="false"
+             android:grantUriPermissions="true">
+             <meta-data
+                 android:name="android.support.FILE_PROVIDER_PATHS"
+                 android:resource="@xml/file_paths"></meta-data>
+         </provider>-->
+    </application>
+</manifest>
