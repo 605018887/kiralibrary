@@ -720,29 +720,16 @@ public class UsualTools {
         return random;
     }
 
-    /**
-     * 打印信息
-     *
-     * @param title
-     * @param msg
-     */
-    public static void showPrintMsg(String title, String msg) {
-        if (isShowPrintMsg) {
-            Log.d("showPrintMsg", title + "=" + msg);
-        }
-
-    }
-
     public static void showPrintMsg(String msg) {
         if (isShowPrintMsg) {
-            if (msg.length() > 4000) {
-                String show = msg.substring(0, 4000);
+            if (msg.length() > 3000) {
+                String show = msg.substring(0, 3000);
                 Log.d("showPrintMsg", show);
-                if ((msg.length() - 4000) > 4000) {// 剩下的文本还是大于规定长度
-                    String partLog = msg.substring(4000, msg.length());
+                if ((msg.length() - 3000) > 3000) {// 剩下的文本还是大于规定长度
+                    String partLog = msg.substring(3000, msg.length());
                     showPrintMsg(partLog);
                 } else {
-                    String surplusLog = msg.substring(4000, msg.length());
+                    String surplusLog = msg.substring(3000, msg.length());
                     Log.d("showPrintMsg", surplusLog + "");
                 }
             } else {
