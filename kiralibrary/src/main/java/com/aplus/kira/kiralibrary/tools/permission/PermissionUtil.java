@@ -68,15 +68,15 @@ public class PermissionUtil {
             this.twoMethodCallback = (PermissionCallback.TwoMethodCallback) permissionCallback;
         }
         List<String> pers = new ArrayList<>();
-        for (String permission:permissions){
-            if (!checkPermissionGrant(permission)){
+        for (String permission : permissions) {
+            if (!checkPermissionGrant(permission)) {
                 pers.add(permission);
             }
         }
-        if (pers.size()==0){
+        if (pers.size() == 0) {
             if (permissionCallback instanceof PermissionCallback.OneMethodCallback) {
                 this.oneMethodCallback = (PermissionCallback.OneMethodCallback) permissionCallback;
-                this.oneMethodCallback.onPermissionCallback(new String[0],new String[0]);
+                this.oneMethodCallback.onPermissionCallback(new String[0], new String[0]);
             } else if (permissionCallback instanceof PermissionCallback.TwoMethodCallback) {
                 this.twoMethodCallback = (PermissionCallback.TwoMethodCallback) permissionCallback;
                 this.twoMethodCallback.onSuccessCallback(new String[0]);
@@ -85,8 +85,8 @@ public class PermissionUtil {
             return;
         }
         permissions = new String[pers.size()];
-        int i=0;
-        for (String permission:pers){
+        int i = 0;
+        for (String permission : pers) {
             permissions[i] = permission;
             i++;
         }
@@ -151,7 +151,7 @@ public class PermissionUtil {
         }
         if (twoMethodCallback != null) {
             twoMethodCallback.onSuccessCallback(successPermissions);
-            if (isHasDeniedPermissions){
+            if (isHasDeniedPermissions) {
                 twoMethodCallback.onDeniedCallback(deniedPermissions);
             }
         }
@@ -169,5 +169,9 @@ public class PermissionUtil {
                 .setNegativeButton("取消", null)
                 .create()
                 .show();
+    }
+
+    public void onDestroy() {
+        instance = null;
     }
 }

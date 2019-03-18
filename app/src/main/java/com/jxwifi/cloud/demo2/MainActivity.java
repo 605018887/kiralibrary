@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.aplus.kira.kiralibrary.Mdialog;
 import com.aplus.kira.kiralibrary.tools.permission.PermissionCallback;
@@ -17,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PermissionUtil.getInstance(getApplicationContext()).requestAllDynamicPermissons(this, new PermissionCallback.TwoMethodCallback() {
+        PermissionUtil.getInstance(getApplicationContext()).requestAllDynamicPermissons(this, new PermissionCallback.OneMethodCallback() {
             @Override
-            public void onSuccessCallback(String[] successPermissions) {
+            public void onPermissionCallback(String[] successPermissions, String[] deniedPermissions) {
+                Log.d("spm", "MainActivity toLoginActivity");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -27,19 +29,21 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
                 },2000);
-
             }
 
-            @Override
-            public void onDeniedCallback(String[] deniedPermissions) {
-
-            }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PermissionUtil.getInstance(getApplicationContext()).onDestroy();
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.d("spm","MainActivity onRequestPermissionsResult");
         PermissionUtil.getInstance(getApplicationContext()).onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }
