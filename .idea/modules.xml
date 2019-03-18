@@ -3,9 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://F:\android\KiraProject\kiralibrary\demo2.iml" filepath="F:\android\KiraProject\kiralibrary\demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo2.iml" filepath="$PROJECT_DIR$/demo2.iml" />
       <module fileurl="file://$PROJECT_DIR$/kiralibrary.iml" filepath="$PROJECT_DIR$/kiralibrary.iml" />
-      <module fileurl="file://F:\android\KiraProject\kiralibrary\kiralibrary\kiralibrary.iml" filepath="F:\android\KiraProject\kiralibrary\kiralibrary\kiralibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiralibrary/kiralibrary.iml" filepath="$PROJECT_DIR$/kiralibrary/kiralibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiralibrary.iml" filepath="$PROJECT_DIR$/kiralibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiralibrary/kiralibrary-kiralibrary.iml" filepath="$PROJECT_DIR$/kiralibrary/kiralibrary-kiralibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/kiralibrary/kiralibrary-kiralibrary.iml" filepath="$PROJECT_DIR$/kiralibrary/kiralibrary-kiralibrary.iml" />
     </modules>
   </component>
